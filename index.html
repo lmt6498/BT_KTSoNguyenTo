@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+        function primeNum(number) {
+        var prime = 1;
+        for (var n = 2; n <= Math.sqrt(number); n++) {
+        if (number % n == 0 && number > 2) {
+        prime = 0;
+    }
+    }
+        return prime;
+    }
+        var number = parseInt(prompt("Nhập số nguyên tố cần kiểm tra: "));
+        if (primeNum(number) == 1 && number>=2) {
+        document.write(number + " là số nguyên tố" + "<br>");
+    }else{
+        document.write(number + " không phải số nguyên tố" + "<br>");
+    }
+
+</script>
+</body>
+</html>
